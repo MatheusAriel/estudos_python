@@ -37,9 +37,7 @@ def verifica_repeticao_lista(lista):
         set_verificados.add(value)
         if len(set_verificados) != index:
             return value
-
     return -1
-    msg = 'Pode acessar' if int(idade) >= 18 else 'Não pode acessar'
 
 
 for lista in lista_de_listas_de_inteiros:
@@ -59,7 +57,6 @@ def solucao2(param_lista_inteiros):
             duplicado = numero
             break
         set_checados.add(numero)
-
     return duplicado
 
 
