@@ -27,6 +27,7 @@ lista_de_listas_de_inteiros = [
     [4, 7, 6, 5, 2, 9, 2, 1, 2, 1],
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 2],
 ]
 
 
@@ -44,5 +45,27 @@ def verifica_repeticao_lista(lista):
 for lista in lista_de_listas_de_inteiros:
     print(lista)
     result = verifica_repeticao_lista(lista)
+    print(f'Não há numeros repetidos na lista' if result < 0 else f'O primeiro numero repetido da lista é: {result}')
+    print()
+
+print('\n\n\t\t****************************************************************************************')
+
+
+def solucao2(param_lista_inteiros):
+    set_checados = set()
+    duplicado = -1
+    for numero in param_lista_inteiros:
+        if numero in set_checados:
+            duplicado = numero
+            break
+        set_checados.add(numero)
+
+    return duplicado
+
+
+for l in lista_de_listas_de_inteiros:
+    solucao2(l)
+    print(l)
+    result = solucao2(l)
     print(f'Não há numeros repetidos na lista' if result < 0 else f'O primeiro numero repetido da lista é: {result}')
     print()
