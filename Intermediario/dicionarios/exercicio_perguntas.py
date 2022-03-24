@@ -35,6 +35,7 @@ perguntas = {
     }
 }
 
+
 def imprime_perguntas():
     for pk, pv in perguntas.items():
         print(f'{pk}: ')
@@ -52,7 +53,7 @@ def jogo(qtd_perguntas):
             print(f"{pk}: {pv['pergunta']}")
             for rk, rv in pv['respostas'].items():
                 print(f'\t[{rk}] : {rv}')
-            resposta_usuario = input('Qual a resposta certa? ')
+            resposta_usuario = input('Qual a resposta certa? ').lower()
             if resposta_usuario not in pv['respostas'].keys():
                 print('Digite uma alternativa válida')
             else:
@@ -73,9 +74,9 @@ def jogo(qtd_perguntas):
 
 imprime_perguntas()
 qtd_perguntas = len(perguntas)
+alternativas = [chr(n).lower() for n in range(ord('a'), ord('d') + 1)]
 if input('Deseja cadastrar mais perguntas? ').upper() == 'SIM':
     qtd_perguntas += 1
-    alternativas = ['a', 'b', 'c', 'd']
     while True:
         pergunta = input('Digite a pergunta: ')
         respostas = {}
@@ -83,7 +84,7 @@ if input('Deseja cadastrar mais perguntas? ').upper() == 'SIM':
             respostas[a] = input(f'Informe a alternativa {a}: ')
 
         while True:
-            resposta_certa = input('Informe a alternativa correta: ')
+            resposta_certa = input(f'Qual a alternativa correta {" | ".join(alternativas)} ?: ').lower()
             if resposta_certa in alternativas:
                 break
 
