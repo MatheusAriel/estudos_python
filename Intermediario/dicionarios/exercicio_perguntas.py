@@ -55,7 +55,7 @@ def jogo(qtd_perguntas):
                 print(f'\t[{rk}] : {rv}')
             resposta_usuario = input('Qual a resposta certa? ').lower()
             if resposta_usuario not in pv['respostas'].keys():
-                print('Digite uma alternativa válida')
+                print('Digite uma alternativa válida ')
             else:
                 respostaincorreta = True
                 resposta_certa = pv['resposta_certa']
