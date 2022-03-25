@@ -78,7 +78,6 @@ print(sys.getsizeof(lista1), type(lista1))
 
 lista2 = (x for x in lista1)
 print(sys.getsizeof(lista2), type(lista2))
-print()
+print('\n')
 for v in lista2:
     print(v)
-
