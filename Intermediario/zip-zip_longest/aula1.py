@@ -11,10 +11,10 @@ print(dict(cidades_estados))
 
 print()
 print('Zip Longest')
-longest_cidades_estados = zip_longest(indices, estados, cidades, fillvalue='UF')
-# print(list(longest_cidades_estados))
+longest_cidades_estados = zip_longest(estados, cidades, fillvalue='UF')
+print(list(longest_cidades_estados))
 
+print()
 zip_cidades_estados = zip(indices, estados, cidades)
-
 for indice, estado, cidade in zip_cidades_estados:
     print(indice, estado, cidade)
