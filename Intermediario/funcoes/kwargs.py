@@ -10,5 +10,6 @@ def func_kwargs(**kwargs):
     print(kwargs.get('peso'))
 
 
+
 func_kwargs(nome='Matheus', nacionalidade='Brasileira', idade=28,
-            lista_linguagens=('java', 'javascript', 'php', 'python'))
+            lista_linguagens=('java', 'javascript', 'php', 'python'), sexo='Masculino')

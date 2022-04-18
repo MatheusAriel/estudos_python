@@ -2,6 +2,7 @@ nome = "Matheus"
 iterador = iter(nome)
 gerador = (x for x in nome)
 
+
 try:
     print(next(iterador))  # M
     print(next(iterador))  # A

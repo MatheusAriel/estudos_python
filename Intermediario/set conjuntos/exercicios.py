@@ -66,3 +66,7 @@ for l in lista_de_listas_de_inteiros:
     result = solucao2(l)
     print(f'Não há numeros repetidos na lista' if result < 0 else f'O primeiro numero repetido da lista é: {result}')
     print()
+
+"""
+ola
+"""
