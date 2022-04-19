@@ -13,7 +13,7 @@ msg = 'existe chave 3' if 'chave3' in d2 else 'Não existe chave3'
 print(msg)
 
 print('\n\n')
-d3 = {'chave': 'valor', 'chave': 'valor real pois é o ultimo'}
+d3 = {'chave': 'valor', 'chave': 'valor real pois é o ultimo', 'chave2':'valor ch 2'}
 print(d3)
 
 print('\n\n')
