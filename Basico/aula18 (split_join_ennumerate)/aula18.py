@@ -1,5 +1,5 @@
 string = 'Abacaxi; Morango; Uva; Maçã'
-listFrutas = string.split('; ')#transforma em lista uma string por determinada regra
+listFrutas = string.split('; ')  # transforma em lista uma string por determinada regra
 print(listFrutas)
 
 print('\n\n')
@@ -12,27 +12,25 @@ for palavra in fraseList:
 print('\n\n')
 
 lista = ['Sony', 'Lenovo', 'dELL', 'HP']
-stringMarcas = ' | '.join(lista)#transforma lista em string separando por determianda regra
+stringMarcas = ' | '.join(lista)  # transforma lista em string separando por determianda regra
 print(stringMarcas.upper())
 
 print('\n\n')
 
-for index, value in enumerate(fraseList):#enumerar elementos de uma lista
-    #print(index, value)
+for index, value in enumerate(fraseList):  # enumerar elementos de uma lista
+    # print(index, value)
     print(f'A palavra {value} esta no indice {index} da frase')
-
 
 print('\n\n')
 
-
 list = [
-    [0,'Matheus'],
-    [1,'Carlos'],
+    [0, 'Matheus'],
+    [1, 'Carlos'],
     [2, 'Pedro']
 ]
 
 listNomes = ['Matheus', 'Carlos', 'Pedro']
-v1,v2,v3 = listNomes
+v1, v2, v3 = listNomes
 print(v3)
 
 for index, value in enumerate(listNomes):
@@ -41,8 +39,8 @@ for index, value in enumerate(listNomes):
 print('\n\n')
 
 listTurmas = [
-    'TURMA1',['1º', '2º', '4ª'],
-    'TURMA2',['3º', '5º', '6ª'],
+    'TURMA1', ['1º', '2º', '4ª'],
+    'TURMA2', ['3º', '5º', '6ª'],
 ]
 
 for index, value in enumerate(listTurmas):
@@ -63,10 +61,9 @@ for index, value in enumerate(list1, 100):
 
 print('\n\n')
 
-arrays= ['Luiz', 'Gilberto', 'Ana',1,2,3,4,5,6,7,8,9,1000]
+arrays = ['Luiz', 'Gilberto', 'Ana', 1, 2, 3, 4, 5, 6, 7, 8, 9, 1000]
 
-#n1, n2, n3,*arrays2, ultimoElemento = arrays
-*arrays2, n1,n2,n3= arrays
+# n1, n2, n3,*arrays2, ultimoElemento = arrays
+*arrays2, n1, n2, n3 = arrays
 
-
-print(n1 )
+print(n1)
