@@ -19,7 +19,6 @@ pessoas = [
     {'nome': 'Jandrei', 'idade': 25},
     {'nome': 'Carlos', 'idade': 17},
     {'nome': 'Robson', 'idade': 65},
-
 ]
 
 lista = [*range(1,100)]
