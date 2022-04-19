@@ -16,7 +16,7 @@ print('******************\n\n')
 
 l1 = [1, 2, 3, 5, 6, 7, 8, 9, 10]
 l2 = [4, 5, 6]
-
+print()
 print(l1 + l2)
 l1.extend(l2)
 l1.append('BANANA')
@@ -53,9 +53,9 @@ jogo3 = 'Max Payne'
 listJogos = [jogo1, jogo2, jogo3]
 
 print(listJogos)
-
+print()
 # o 3 recebera do terceiro pra frente
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+lista = [*range(1,11)]
 v1, v2, *v3 = lista
 
 print(v1, v2, v3)
