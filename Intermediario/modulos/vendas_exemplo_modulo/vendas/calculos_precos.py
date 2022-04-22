@@ -1,3 +1,19 @@
+"""
+try:
+    import os, sys
+
+    sys.path.append(
+        os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                '../'
+            )
+        )
+    )
+except ImportError:
+    raise
+"""
+
 from formata.preco import real
 
 
