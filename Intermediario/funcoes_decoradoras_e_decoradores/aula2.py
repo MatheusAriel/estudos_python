@@ -8,6 +8,7 @@ def velocidade(func):
         end_time = time()
         time_process = (end_time - start_time) * 1000
         print(f'\nO tempo de processo da função {func.__name__}() foi de {time_process:.2f} ms')
+        #return result
 
     return interna
 
