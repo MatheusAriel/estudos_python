@@ -47,7 +47,7 @@ def validar_cnpj(cnpj):
         return False
 
 
-def gerar_cnpj():
+def gerar_cnpj(mascara=True):
     primeiro_digito = random.randint(0, 9)
     segundo_digito = random.randint(0, 9)
     segundo_bloco = random.randint(100, 999)
@@ -63,7 +63,7 @@ def gerar_cnpj():
     inicio_cnpj += str(digito)
 
     if validar_cnpj(inicio_cnpj):
-        return mascara_cnpj(inicio_cnpj)
+        return mascara_cnpj(inicio_cnpj) if mascara else inicio_cnpj
     else:
         return gerar_cnpj()
 
