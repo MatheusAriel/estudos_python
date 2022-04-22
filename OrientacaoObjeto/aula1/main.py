@@ -16,3 +16,8 @@ p1.falar('POO')
 p1.parar_comer()
 p1.falar('POO')
 p1.falar('OB')
+
+print()
+print(p1.get_ano_nascimento())
+
+print(Pessoa.ano_atual)
