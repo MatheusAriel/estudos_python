@@ -1,4 +1,4 @@
-import re
+import re, random
 
 
 def limpa_cnpj(cnpj):
@@ -24,14 +24,12 @@ def calcula_digito(cnpj, i=5):
 
 
 def verifica_sequencial(cnpj):
-    sequencia = cnpj[0] * len(cnpj)
-
-    if sequencia == cnpj:
+    if (cnpj[0] * len(cnpj)) == cnpj:
         raise 'CNPJ Sequencial'
     return True
 
 
-def validador_cnpj(cnpj):
+def validar_cnpj(cnpj):
     try:
         cnpjOriginal = limpa_cnpj(cnpj)
         cnpj = cnpjOriginal[0:-2]
@@ -49,8 +47,31 @@ def validador_cnpj(cnpj):
         return False
 
 
+def gerar_cnpj():
+    primeiro_digito = random.randint(0, 9)
+    segundo_digito = random.randint(0, 9)
+    segundo_bloco = random.randint(100, 999)
+    terceiro_bloco = random.randint(100, 999)
+    quarto_bloco = '0001'
+
+    inicio_cnpj = f'{primeiro_digito}{segundo_digito}{segundo_bloco}{terceiro_bloco}{quarto_bloco}'
+
+    digito = calcula_digito(inicio_cnpj, 5)
+    inicio_cnpj += str(digito)
+
+    digito = calcula_digito(inicio_cnpj, 6)
+    inicio_cnpj += str(digito)
+
+    if validar_cnpj(inicio_cnpj):
+        return mascara_cnpj(inicio_cnpj)
+    else:
+        return gerar_cnpj()
+
+
 if __name__ == '__main__':
     cnpj = '59.804.695/0001-07'
-    print(mascara_cnpj(cnpj))
+    # print(mascara_cnpj(cnpj))
 
-    print(validador_cnpj(cnpj))
+    # print(validar_cnpj(cnpj))
+
+    print(gerar_cnpj())
