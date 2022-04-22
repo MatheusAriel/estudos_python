@@ -27,9 +27,8 @@ def verifica_sequencial(cnpj):
     sequencia = cnpj[0] * len(cnpj)
 
     if sequencia == cnpj:
-        return False
-    else:
-        return True
+        raise 'CNPJ Sequencial'
+    return True
 
 
 def validador_cnpj(cnpj):
@@ -37,14 +36,15 @@ def validador_cnpj(cnpj):
         cnpjOriginal = limpa_cnpj(cnpj)
         cnpj = cnpjOriginal[0:-2]
 
-        if (verifica_sequencial(cnpj)):
-            digito = calcula_digito(cnpj, i=5)
-            cnpj += str(digito)
+        verifica_sequencial(cnpj)
+        digito = calcula_digito(cnpj, i=5)
+        cnpj += str(digito)
 
-            digito = calcula_digito(cnpj, i=6)
-            cnpj += str(digito)
+        digito = calcula_digito(cnpj, i=6)
+        cnpj += str(digito)
 
-            return True if cnpj == cnpjOriginal else False
+        return True if cnpj == cnpjOriginal else False
+
     except:
         return False
 
