@@ -10,7 +10,7 @@ class Pessoa:
         self.falando = falando
         self.comendo = comendo
 
-        var = 'Valor do init'
+        var = 'vari[avel do init(construtor)'
 
     def falar(self, msg=None):
         if self.comendo:
@@ -50,3 +50,8 @@ class Pessoa:
 
     def get_ano_nascimento(self):
         return self.ano_atual - self.idade
+
+    @classmethod
+    def por_ano_nascimento(cls, nome, ano_nascimento):
+        idade = cls.ano_atual - ano_nascimento
+        return cls(nome, idade)
