@@ -1,3 +1,9 @@
+"""
+1 - Se precisar usar a palavra self dentro do método: tem de ser método de instância
+2 - Se precisar usar a classe em si dentro do método (cls) tem de ser método de classe
+3 - Se não precisar nem de self e nem de cls dentro do método, pode ser um método estático.
+"""
+
 class Connector:
     def __init__(self, host, usuario, senha):
         self.host = host
