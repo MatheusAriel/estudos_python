@@ -24,7 +24,7 @@ p1 = Pessoa('Marcos')
 print(p1.nome, p1.sobrenome)
 
 """
-#da erro pois agr o nome é um get e não mais uma função, seria como acessar o atributo da classe
+#da erro pois agr o nome é um get e não mais uma função, e agora seria como acessar o atributo da classe
 print(p1.nome())
 """
 print()

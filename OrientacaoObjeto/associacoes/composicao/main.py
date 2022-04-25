@@ -1,16 +1,16 @@
-from carrinhodecompras import CarrinhoDeCompras
-from produto import Produto
+from cliente import Cliente
 
-carrinho = CarrinhoDeCompras()
+cliente = Cliente('julio', 'A')
+cliente.inserir_endereco('13570-98', 'A21')
+cliente.inserir_endereco('11570-08', 'Sala 2')
+cliente.listar_enderecos()
+del cliente
 
-produto = Produto('TV', 2500.00)
-produto2 = Produto('PC', 7500.00)
-produto3 = Produto('Celular', 4500.00)
+print('\n###################################################\n')
 
-carrinho.listar_produtos()
-carrinho.inserir_produto(produto)
-carrinho.inserir_produto(produto3)
+cliente2 = Cliente('maria', 'f')
+cliente2.inserir_endereco('1458956', '85')
+cliente2.inserir_endereco('1458965', '52')
+cliente2.listar_enderecos()
+del cliente2
 
-carrinho.listar_produtos()
-print()
-print(carrinho.somar_total())
