@@ -4,6 +4,7 @@
 3 - Se não precisar nem de self e nem de cls dentro do método, pode ser um método estático.
 """
 
+
 class Connector:
     def __init__(self, host, usuario, senha):
         self.host = host

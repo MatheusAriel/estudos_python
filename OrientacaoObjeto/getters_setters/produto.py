@@ -1,17 +1,26 @@
+"""
+pode existir um getter sozinho de uma tributo, mas nunca um setter sozinho, setter precida do getter
+"""
+
+
+
+
+
+
 import re
-
-
 class Produto:
     def __init__(self, nome, preco):
         self.nome = nome
         self.preco = preco
 
     # get
+    #esse @propetry indica para o python q vc quer tratar essa func como um atributo
     @property
     def preco(self):
         return self._preco
 
     # set
+    #para criar um setter eh preciso dar @ algum setter ja existente
     @preco.setter
     def preco(self, value):
         if not isinstance(value, float):
@@ -41,3 +50,4 @@ p2 = Produto('CANECA', 'R$35.90')
 print(p2.__dict__)
 p2.descontar(50)
 print(p2.preco)
+
