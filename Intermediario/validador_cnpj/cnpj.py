@@ -32,7 +32,8 @@ def verifica_sequencial(cnpj):
 def validar_cnpj(cnpj):
     try:
         cnpjOriginal = limpa_cnpj(cnpj)
-        cnpj = cnpjOriginal[0:-2]
+        cnpj = cnpjOriginal[:-2]
+
 
         verifica_sequencial(cnpj)
         digito = calcula_digito(cnpj, i=5)
