@@ -1,12 +1,6 @@
 """
 pode existir um getter sozinho de uma tributo, mas nunca um setter sozinho, setter precida do getter
 """
-
-
-
-
-
-
 import re
 class Produto:
     def __init__(self, nome, preco):
