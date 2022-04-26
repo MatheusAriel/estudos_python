@@ -1,0 +1,24 @@
+ERROR: Galaxy S10 não está ligado ### DATA:26/04/2022 13:55:22
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:22
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:22
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:22
+INFO: Galaxy S10 desconectado com sucesso ! ### DATA:26/04/2022 13:55:22
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:22
+ERROR: Galaxy S10 não está ligado ### DATA:26/04/2022 13:55:23
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:23
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:23
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:23
+INFO: Galaxy S10 desconectado com sucesso ! ### DATA:26/04/2022 13:55:23
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:23
+ERROR: Galaxy S10 não está ligado ### DATA:26/04/2022 13:55:24
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:24
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:24
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:24
+INFO: Galaxy S10 desconectado com sucesso ! ### DATA:26/04/2022 13:55:24
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:24
+ERROR: Galaxy S10 não está ligado ### DATA:26/04/2022 13:55:34
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:34
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:34
+ERROR: Galaxy S10 já está conectado ### DATA:26/04/2022 13:55:34
+INFO: Galaxy S10 desconectado com sucesso ! ### DATA:26/04/2022 13:55:34
+INFO: Galaxy S10 conectado com sucesso ! ### DATA:26/04/2022 13:55:34
