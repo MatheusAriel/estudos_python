@@ -5,7 +5,7 @@ colors = ['purple', 'red', 'green', 'orange', 'blue', 'yellow', 'brown', 'pink',
 t = turtle.Pen()
 turtle.bgcolor('black')
 
-for x in range(360):
+for x in range(800):
     t.pencolor(colors[x % len(colors)])
     t.width(x // 100 + 1)
     t.forward(x)
