@@ -11,6 +11,8 @@ class CarrinhoDeCompras:
 
     def listar_produtos(self):
         for i, p in enumerate(self.produtos, 1):
+            #caso produto nome n tivesse um getter
+            #print(f'Produto {i}: {p._Produto__nome} - \tR${p.preco}')
             print(f'Produto {i}: {p.nome} - \tR${p.preco}')
 
     def somar_total(self):
