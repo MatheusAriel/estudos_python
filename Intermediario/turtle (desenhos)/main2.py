@@ -11,10 +11,12 @@ def randomColor():
 
 t = turtle.Pen()
 x = 1
+tup = (255,52,60)
 while True:
     x += 1
     t.width(1 / 10)
-    t.pencolor((255, 55, 55))
+    t.pencolor(tup)
+    t.pencolor()
     t.forward(200)
     t.left(170)
     t.speed(0)
