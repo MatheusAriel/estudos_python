@@ -11,18 +11,19 @@ def random_color():
 
 
 t = turtle.Turtle()
+turtle.colormode(255)
+
 x = 1
 while True:
     x += 1
-    #t.width(1 / 10)
+    #if x > 100: x = 10
+    t.width(x / 15)
     t.color(random_color())
-    t.forward(200)
-    t.left(170)
+    t.forward(500 + x)
+
+    t.left(170 + (x / 2))
     t.speed(0)
     # if (abs(t.pos()) < 1):
     #     break
 
 t.end_fill()
-
-
-
