@@ -17,7 +17,7 @@ x = 1
 while True:
     x += 1
     #if x > 100: x = 10
-    t.width(x / 15)
+    t.width(float(x / 100))
     t.color(random_color())
     t.forward(500 + x)
 
