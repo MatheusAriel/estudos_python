@@ -1,5 +1,11 @@
+from random import randrange, choice
 import turtle
-from random import randrange
+
+turtle.colormode(255)
+tt = turtle.Turtle()
+tt.speed("fastest")
+tt.pensize(5)
+direction = [90, 270]
 
 
 def random_color():
@@ -10,19 +16,8 @@ def random_color():
     return random_color
 
 
-t = turtle.Turtle()
-x = 1
 while True:
-    x += 1
-    #t.width(1 / 10)
-    t.color(random_color())
-    t.forward(200)
-    t.left(170)
-    t.speed(0)
-    # if (abs(t.pos()) < 1):
-    #     break
-
-t.end_fill()
-
-
-
+    move = choice(direction)
+    tt.forward(40)
+    tt.color(random_color())
+    tt.left(move)
