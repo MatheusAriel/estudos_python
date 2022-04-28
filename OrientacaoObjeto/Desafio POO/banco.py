@@ -40,4 +40,12 @@ class Banco:
         if cliente not in self._clientes:
             raise Exception(f'Cliente {cliente.nome} - doc {cliente.documento} não faz parte do banco {self.nome}')
 
-        return True
+        if cliente.conta not in self._contas:
+            raise Exception(
+                f'Número conta {cliente.conta.numero_conta} - AG: {cliente.conta.agencia} não faz parte do banco '
+                f'{self.nome}')
+
+        if cliente.conta.agencia not in self._agencias:
+            raise Exception(
+                f'Número conta {cliente.conta.numero_conta} - AG: {cliente.conta.agencia} não faz parte do banco '
+                f'{self.nome}')
