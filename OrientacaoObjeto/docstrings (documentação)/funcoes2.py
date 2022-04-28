@@ -14,14 +14,32 @@ variavel = 'valor'
 
 
 def somar(x, y):
-    """soma x + y"""
+    """soma x + y
+       :param x: Primeiro Número
+       :type x: int or float
+       :param y: Segundo Número
+       :type y: int or float
+
+       :return: A soma entre x e y
+       :rtype: int or floar
+    """
     return x + y
 
 
 def multiplicar(x, y, z=None):
     """multiplica x,y,z
-
+    
        multiplica x,y,z. O programador pode omitir a variavel z caso não tenha necessidade em usá-la
+
+       :param x: Primeiro Número
+       :type x: int or float
+       :param y: Segundo Número
+       :type y: int or float
+       :param z: Terceiro número (opcional)
+       :type z: int, float or None
+
+       :return: A multiplicacao entre x e y e z (caso exista)
+       :rtype: int or floar
     """
     if z:
         result = x * y * z
