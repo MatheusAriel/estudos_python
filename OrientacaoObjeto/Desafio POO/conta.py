@@ -47,8 +47,11 @@ class Conta(ABC):
 
     def depositar(self, valor: float):
         self.verificar_valor_numerico(valor)
-        self._saldo += valor
-        self.detalhar_conta()
+        if valor > 0:
+            self._saldo += valor
+            self.detalhar_conta()
+        else:
+            raise Exception('Deposite um valor maior que 0')
 
     @abstractmethod
     def sacar(self, valor: float):
