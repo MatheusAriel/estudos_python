@@ -28,11 +28,10 @@ else:
 finally:
     print('Idependentemente de sucesso ou erro, serei executado')
 
-
 print('\n\n\n\n')
 
 try:
-    a = 1/0
+    a = 1 / 0
 except NameError as er:
     print(f'Erro -  {er}')
 except (IndexError, KeyError) as er:
@@ -40,7 +39,7 @@ except (IndexError, KeyError) as er:
 except Exception as er:
     print('Ops, Ocorreu um erro inesperado')
 else:
-   pass
+    pass
 finally:
     a = None
 
