@@ -1,5 +1,4 @@
 import requests
-import traceback
 from time import time
 
 
@@ -53,5 +52,5 @@ class Cep:
 
 
 if __name__ == '__main__':
-    c1 = Cep('00000000')
+    c1 = Cep('49001-054')
     print(c1.buscar_cep())
