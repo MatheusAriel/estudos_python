@@ -1,7 +1,10 @@
-from cep import Cep
+from cep import *
+from enum import Enum, auto
 
 
-endereco = Cep.gerar_endereco()
-print(endereco)
-c1 = Cep(endereco['cep'])
-print(c1.buscar_cep())
+while True:
+    endereco = Cep.gerar_endereco()
+    # print(endereco)
+    c1 = Cep(endereco['cep'], ApiCep.VIA_CEP)
+    print('\t',c1.buscar_cep())
+    print('\n')

@@ -1,11 +1,18 @@
 import requests
 from time import time
 from random import choice
+from enum import Enum
+
+
+class ApiCep(Enum):
+    AWESOME = 'https://cep.awesomeapi.com.br/json/{CEP}'
+    VIA_CEP = 'https://viacep.com.br/ws/{CEP}/json'
 
 
 class Cep:
-    def __init__(self, cep: str):
+    def __init__(self, cep: str, api=ApiCep.AWESOME):
         self._cep = cep
+        self.api = api
 
     @property
     def cep(self):
@@ -36,8 +43,11 @@ class Cep:
     @_calcular_tempo_request
     def buscar_cep(self):
         try:
-            self.cep = self._cep
-            link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
+            if not isinstance(self.api, ApiCep):
+                raise ValueError("API inválida")
+
+            link = self.api.value.replace('{CEP}', self.cep)
+            # link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
             # link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
             request = request.json()
@@ -55,8 +65,9 @@ class Cep:
     @staticmethod
     def gerar_endereco():
         try:
-            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE',
-                       'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
+            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR',
+                             'PE',
+                             'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
 
             link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}"
             request = requests.get(link)
@@ -74,8 +85,16 @@ class Cep:
 
 
 if __name__ == '__main__':
-    while True:
-        endereco = Cep.gerar_endereco()
-        # print(endereco)
-        c1 = Cep(endereco['cep'])
-        print(c1.buscar_cep())
+    endereco = Cep.gerar_endereco()
+    # print(endereco)
+
+    print('COM AWESOME API: ')
+    cep = Cep(endereco['cep'])
+    print('\t', cep.buscar_cep())
+
+    print('\n\n', '*' * 50, '\n\n')
+
+    endereco = Cep.gerar_endereco()
+    print('COM VIA CEP API: ')
+    cep = Cep(endereco['cep'], ApiCep.VIA_CEP)
+    print('\t', cep.buscar_cep())
