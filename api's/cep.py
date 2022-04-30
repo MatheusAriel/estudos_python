@@ -1,5 +1,6 @@
 import requests
 from time import time
+from random import choice
 
 
 class Cep:
@@ -27,7 +28,7 @@ class Cep:
             f = func(self)
             end_time = time()
             time_process = (end_time - start_time)
-            print(f'Tempo de processo do script: {time_process:.2f} segundos')
+            print(f'Tempo de processo do {func.__name__}: {time_process:.2f} segundos')
             return f
 
         return wrapper
@@ -37,6 +38,7 @@ class Cep:
         try:
             self.cep = self._cep
             link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
+            # link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
             request = request.json()
 
@@ -50,7 +52,30 @@ class Cep:
         else:
             return request
 
+    @staticmethod
+    def gerar_endereco():
+        try:
+            estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG',
+                       'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP',
+                       'SE', 'TO', 'DF']
+            link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(estados)}"
+            request = requests.get(link)
+            request = request.json()
+
+            if 'message' in request and request['message'] == 'error':
+                raise ConnectionError(f'Erro ao gerar endereço')
+
+        except (ConnectionError, requests.exceptions.ConnectionError) as erro:
+            print(f'Erro ao gerar ENDEREÇO - {erro}')
+        except Exception as erro:
+            print(f'Erro ao gerar ENDEREÇO - {erro}')
+        else:
+            return request
+
 
 if __name__ == '__main__':
-    c1 = Cep('49001-054')
-    print(c1.buscar_cep())
+    while True:
+        endereco = Cep.gerar_endereco()
+        # print(endereco)
+        c1 = Cep(endereco['cep'])
+        print(c1.buscar_cep())
