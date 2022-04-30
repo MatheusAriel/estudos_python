@@ -55,10 +55,10 @@ class Cep:
     @staticmethod
     def gerar_endereco():
         try:
-            estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE',
+            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE',
                        'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
 
-            link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(estados)}"
+            link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}"
             request = requests.get(link)
             request = request.json()
 
