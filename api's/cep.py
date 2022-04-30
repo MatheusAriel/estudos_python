@@ -5,7 +5,7 @@ from time import time
 
 class Cep:
     def __init__(self, cep: str):
-        self.cep = cep
+        self._cep = cep
 
     @property
     def cep(self):
@@ -36,24 +36,22 @@ class Cep:
     @_calcular_tempo_request
     def buscar_cep(self):
         try:
-            link = f'https://cep.awesomeapiz.com.br/json/{self.cep}'
+            self.cep = self._cep
+            link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
             request = requests.get(link)
             request = request.json()
 
             if 'status' in request and request['status'] != 200:
                 raise ConnectionError(f'Status {request["status"]} - {request["message"]}')
 
-        except ConnectionError as erro:
-            print(f'Erro na conexão: {erro}')
+        except (ConnectionError, requests.exceptions.ConnectionError) as erro:
+            print(f'Erro na conexão - {erro}')
+        except (ValueError, TypeError, Exception) as erro:
+            print(f'Erro: {erro}')
         else:
             return request
 
 
 if __name__ == '__main__':
-
-    try:
-        c1 = Cep('13568-783')
-        print(c1.buscar_cep())
-    except (ValueError, TypeError) as erro:
-        print(f'Erro: {erro}')
-
+    c1 = Cep('00000000')
+    print(c1.buscar_cep())
