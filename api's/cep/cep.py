@@ -2,6 +2,7 @@ import requests
 from time import time
 from random import choice
 from enum import Enum
+import traceback
 
 
 class ApiCep(Enum):
@@ -30,9 +31,9 @@ class Cep:
         self._cep = cep
 
     def _calcular_tempo_request(func):
-        def wrapper(self):
+        def wrapper(*args):
             start_time = time()
-            f = func(self)
+            f = func(*args)
             end_time = time()
             time_process = (end_time - start_time)
             print(f'Tempo de processo do {func.__name__}: {time_process:.2f} segundos')
@@ -50,10 +51,10 @@ class Cep:
             # link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
             # link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
-            request = request.json()
+            if request.status_code != 200:
+                raise ConnectionError(f'Erro ao gerar endereço')
 
-            if 'status' in request and request['status'] != 200:
-                raise ConnectionError(f'Status {request["status"]} - {request["message"]}')
+            request = request.json()
 
         except (ConnectionError, requests.exceptions.ConnectionError) as erro:
             print(f'Erro na conexão - {erro}')
@@ -63,15 +64,19 @@ class Cep:
             return request
 
     @staticmethod
+    @_calcular_tempo_request
     def gerar_endereco():
         try:
-            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR',
-                             'PE',
-                             'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
+            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB',
+                             'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
 
-            link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}"
-            request = requests.get(link)
-            request = request.json()
+            # link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}"
+
+            link = "https://www.invertexto.com/ajax/gerar-cep.php"
+            request = requests.post(link)
+
+            if request.status_code != 200:
+                raise ConnectionError(f'Erro ao gerar endereço')
 
             if 'message' in request and request['message'] == 'error':
                 raise ConnectionError(f'Erro ao gerar endereço')
@@ -80,21 +85,22 @@ class Cep:
             print(f'Erro ao gerar ENDEREÇO - {erro}')
         except Exception as erro:
             print(f'Erro ao gerar ENDEREÇO - {erro}')
+            traceback.print_exc()
         else:
-            return request
+            return request.json()
 
 
 if __name__ == '__main__':
     endereco = Cep.gerar_endereco()
-    # print(endereco)
+    print(endereco['cep'])
 
-    print('COM AWESOME API: ')
-    cep = Cep(endereco['cep'])
-    print('\t', cep.buscar_cep())
-
-    print('\n\n', '*' * 50, '\n\n')
-
-    endereco = Cep.gerar_endereco()
-    print('COM VIA CEP API: ')
-    cep = Cep(endereco['cep'], ApiCep.VIA_CEP)
-    print('\t', cep.buscar_cep())
+    # print('COM AWESOME API: ')
+    # cep = Cep(endereco['cep'])
+    # print('\t', cep.buscar_cep())
+    #
+    # print('\n\n', '*' * 50, '\n\n')
+    #
+    # endereco = Cep.gerar_endereco()
+    # print('COM VIA CEP API: ')
+    # cep = Cep(endereco['cep'], ApiCep.VIA_CEP)
+    # print('\t', cep.buscar_cep())
