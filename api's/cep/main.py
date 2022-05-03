@@ -14,8 +14,8 @@ i = 1
 start_time = perf_counter()
 
 while i <= vezes:
-    #endereco = Cep.gerar_endereco()
-    c1 = Cep('13574240', ApiCep.AWESOME)
+    endereco = Cep.gerar_endereco()
+    c1 = Cep(endereco['cep'], ApiCep.AWESOME)
     print('\t', f'Req: {i} - {c1.buscar_cep()}')
     print('\n')
     i += 1

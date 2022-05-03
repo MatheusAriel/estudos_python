@@ -4,7 +4,9 @@ ffmpeg -i "ENTRADA" -i "LEGENDA" -c:v LIBX264 -crf 23 -preset ultrafast -c:a aac
 -c:s srt -map v:v0 -map a -map 1:0 -ss 00:00:00 -to 00:00:10 "SAIDA"
 """
 
-import os, fnmatch, sys
+import fnmatch
+import os
+import sys
 
 if sys.platform == 'linux':
     comando_ffmpeg = 'ffmpeg'
@@ -40,7 +42,7 @@ for raiz, pastas, arquivos in os.walk(caminho_origem):
 
         nome_arquivo, extensao_arquivo = os.path.splitext(arquivo)
 
-        nome_novo_arquivo = nome_arquivo + '_NOVO' + extensao_arquivo
+        nome_novo_arquivo = f'{nome_arquivo}_NOVO{extensao_arquivo}'
         arquivo_saida = os.path.join(raiz, nome_novo_arquivo)
 
         comando = f'{comando_ffmpeg} -i "{caminho_completo}" {input_legenda} ' \
