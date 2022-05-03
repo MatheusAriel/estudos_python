@@ -34,7 +34,7 @@ import json
 
 list = [1, 2, 3, 4, 5, 6, 7, 8]
 
-#passar de PYTHON para JSON
+# passar de PYTHON para JSON
 json_list = json.dumps(list)
 print(json_list, type(json_list))
 
@@ -43,9 +43,9 @@ print()
 json_dict = json.dumps(clientes_dicionario, indent=4)
 print(json_dict, type(json_dict))
 
-
 print('\n\n')
-#passar de JSON para PYTHON
+
+# passar de JSON para PYTHON
 dados_dict = json.loads(clientes_json)
 print(dados_dict, type(dados_dict))
 for k, v in dados_dict.items():
@@ -53,3 +53,16 @@ for k, v in dados_dict.items():
     print(v)
 
 
+
+print('\n\n')
+
+
+# SALVAR UM DICT EM UM ARQUIVO JSON
+with open('clientes.json', 'w') as file:
+    json.dump(clientes_dicionario, file, indent=4)
+
+# PEGAR UM ARQUIVO JSON E TRANSFORMAR EM DICT
+with open('clientes.json', 'r') as file:
+    dados = json.load(file)
+
+print(dados, type(dados))
