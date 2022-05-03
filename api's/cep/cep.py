@@ -1,5 +1,5 @@
 import requests
-from time import time
+from time import perf_counter
 from random import choice
 from enum import Enum
 import traceback
@@ -32,11 +32,11 @@ class Cep:
 
     def _calcular_tempo_request(func):
         def wrapper(*args):
-            start_time = time()
+            start_time = perf_counter()
             f = func(*args)
-            end_time = time()
+            end_time = perf_counter()
             time_process = (end_time - start_time)
-            print(f'Tempo de processo do {func.__name__}: {time_process:.2f} segundos')
+            print(f'Tempo de processo do {func.__name__}: {time_process:.3f} segundos')
             return f
 
         return wrapper
@@ -48,8 +48,8 @@ class Cep:
                 raise ValueError("API inválida")
 
             link = self.api.value.replace('{CEP}', self.cep)
-            # link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
-            # link = f'https://viacep.com.br/ws/{self.cep}/json'
+            #link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
+            #link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
