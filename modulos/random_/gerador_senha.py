@@ -10,9 +10,8 @@ while True:
         tamanho_senha = int(input('Informa o tamanho da sua senha: '))
         deseja_digitos = input('Deseja que sua senha possua dígitos? [Y-N]  ').upper()
         deseja_especiais = input('Deseja que sua senha possua caracteres especiais? [Y-N]  ').upper()
-        deseja_repetidos = input('Deseja que sua senha possua caracteres repetidos? [Y-N]  ').upper()
 
-        if deseja_especiais and deseja_especiais and deseja_repetidos not in ['Y', 'N']:
+        if deseja_especiais and deseja_especiais not in ['Y', 'N']:
             raise Exception('Escolha uma opção válida')
 
         letras = string.ascii_letters
@@ -25,10 +24,7 @@ while True:
         if deseja_especiais == 'Y':
             geral += caracteres
 
-        if deseja_repetidos == 'Y':
-            senha = "".join(random.choices(geral, k=tamanho_senha))
-        else:
-            senha = "".join(random.sample(geral, k=tamanho_senha))
+        senha = "".join(random.choices(geral, k=tamanho_senha))
 
         print(f'Sua senha é: {senha}')
     except ValueError:
