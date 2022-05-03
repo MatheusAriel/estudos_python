@@ -2,7 +2,7 @@ from cep import *
 from time import time
 
 while True:
-    vezes = input('Informe quantas requisições vc deseja ? ')
+    vezes = input('Informe quantas requisições você deseja ? ')
     try:
         vezes = int(vezes)
         if vezes > 0:
