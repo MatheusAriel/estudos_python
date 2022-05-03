@@ -41,15 +41,15 @@ class Cep:
 
         return wrapper
 
-    @_calcular_tempo_request
+    # @_calcular_tempo_request
     def buscar_cep(self):
         try:
             if not isinstance(self.api, ApiCep):
                 raise ValueError("API inválida")
 
             link = self.api.value.replace('{CEP}', self.cep)
-            #link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
-            #link = f'https://viacep.com.br/ws/{self.cep}/json'
+            # link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
+            # link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
@@ -64,13 +64,13 @@ class Cep:
             return request
 
     @staticmethod
-    #@_calcular_tempo_request
+    # @_calcular_tempo_request
     def gerar_endereco():
         try:
-            lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB',
+            '''lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB',
                              'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
 
-            # link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}"
+            link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}" '''
 
             link = "https://www.invertexto.com/ajax/gerar-cep.php"
             request = requests.post(link)
@@ -91,14 +91,14 @@ class Cep:
 
 
 if __name__ == '__main__':
-    print('COM AWESOME API: ')
-    endereco = Cep.gerar_endereco()
-    cep = Cep(endereco['cep'])
-    print('\t', cep.buscar_cep())
+    cep = Cep('13568783', ApiCep.AWESOME)
 
-    print('\n\n', '*' * 50, '\n\n')
+    start_time = perf_counter()
+    i = 0
+    while i <= 300:
+        cep.buscar_cep()
+        i += 1
+    end_time = perf_counter()
 
-    endereco = Cep.gerar_endereco()
-    print('COM VIA CEP API: ')
-    cep = Cep(endereco['cep'], ApiCep.VIA_CEP)
-    print('\t', cep.buscar_cep())
+    time_process = end_time - start_time
+    print('\t', f'Tempo: {time_process:.2f}')
