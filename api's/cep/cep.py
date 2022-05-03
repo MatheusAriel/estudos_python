@@ -48,8 +48,6 @@ class Cep:
                 raise ValueError("API inválida")
 
             link = self.api.value.replace('{CEP}', self.cep)
-            # link = f'https://cep.awesomeapi.com.br/json/{self.cep}'
-            # link = f'https://viacep.com.br/ws/{self.cep}/json'
             request = requests.get(link)
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
@@ -69,7 +67,6 @@ class Cep:
         try:
             '''lista_estados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB',
                              'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
-
             link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}" '''
 
             link = "https://www.invertexto.com/ajax/gerar-cep.php"
