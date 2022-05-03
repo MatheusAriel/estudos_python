@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 from locale import setlocale, LC_ALL
+import utils
 
 setlocale(LC_ALL, 'pt_BR.utf-8')
 

@@ -12,15 +12,15 @@ else:
     comando_ffmpeg = r'ffmpeg\ffmpeg.exe'
 
 codec_video = '-c:v libx264'
+codec_audio = '-c:a aac'
 crf = '-crf 23'
 preset = '-preset ultrafast'
-codec_audio = '-c:a aac'
 bitrate_audio = '-b:a 320k'
 debug = '-ss 00:00:00 -to 00:00:10'
 debug = ''
 
-caminho_origem = '/home/luizotavio/Desktop/videos'
-caminho_destino = '/home/luizotavio/Desktop/saida'
+caminho_origem = r'C:\Users\mathe\Downloads\videos'
+caminho_destino = r'C:\Users\mathe\Downloads\videos_convertidos'
 
 for raiz, pastas, arquivos in os.walk(caminho_origem):
     for arquivo in arquivos:
