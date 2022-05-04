@@ -16,10 +16,11 @@ start_time = perf_counter()
 while i <= vezes:
     endereco = Cep.gerar_endereco()
     cep = Cep(endereco['cep'], ApiCep.AWESOME)
-    print('\t', f'Req: {i} - {cep.buscar_cep()}')
-    print('\n')
+    cep.buscar_cep()
+    print(f'Req: {i}\n')
+    # print('\t', f'Req: {i} - {cep.buscar_cep()}')
     i += 1
 
 end_time = perf_counter()
-time_process = (end_time - start_time)
-print(f'Tempo total de processo {vezes} requisições: {time_process:.2f} segundos usando a api {ApiCep.AWESOME.name}')
+print(
+    f'Tempo total de processo {vezes} requisições: {(end_time - start_time):.2f} segundos usando a api {ApiCep.AWESOME.name}')

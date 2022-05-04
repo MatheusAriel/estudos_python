@@ -6,8 +6,8 @@ import traceback
 
 
 class ApiCep(Enum):
-    AWESOME = 'https://cep.awesomeapi.com.br/json/{CEP}'
-    VIA_CEP = 'https://viacep.com.br/ws/{CEP}/json'
+    AWESOME = 'https://cep.awesomeapi.com.br/json/{}'
+    VIA_CEP = 'https://viacep.com.br/ws/{}/json'
 
 
 class Cep:
@@ -41,18 +41,19 @@ class Cep:
 
         return wrapper
 
-    # @_calcular_tempo_request
+    @_calcular_tempo_request
     def buscar_cep(self):
         try:
             if not isinstance(self.api, ApiCep):
                 raise ValueError("API inválida")
 
-            link = self.api.value.replace('{CEP}', self.cep)
+            link = self.api.value.format(self.cep)
             request = requests.get(link)
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
 
             request = request.json()
+            # print(dir(request))
 
         except (ConnectionError, requests.exceptions.ConnectionError) as erro:
             print(f'Erro na conexão - {erro}')
@@ -90,12 +91,12 @@ class Cep:
 if __name__ == '__main__':
     cep = Cep('13568783', ApiCep.AWESOME)
 
+    i = 1
     start_time = perf_counter()
-    i = 0
-    while i <= 300:
+
+    while i <= 1:
         cep.buscar_cep()
         i += 1
-    end_time = perf_counter()
 
-    time_process = end_time - start_time
-    print('\t', f'Tempo: {time_process:.2f}')
+    end_time = perf_counter()
+    print('\t', f'Tempo total da execução: {(end_time - start_time):.2f} - {i}')
