@@ -26,5 +26,6 @@ cpfComMascara = '{}.{}.{}-{}'.format(cpf_sem_digitos[:3],
                                      cpf_sem_digitos[6:9],
                                      cpf_sem_digitos[9:])
 
+
 print(f'CPF SEM MÁSCARA: {cpf_sem_digitos}')
 print(f'CPF COM MÁSCARA: {cpfComMascara}')
