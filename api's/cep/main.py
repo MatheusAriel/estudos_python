@@ -17,6 +17,7 @@ while i <= vezes:
     endereco = Cep.gerar_endereco()
     cep = Cep(endereco['cep'], ApiCep.AWESOME)
     cep.buscar_cep()
+    # print(dir(cep))#mostra todos os metodos e atributos da classe cep
     print(f'Req: {i}\n')
     # print('\t', f'Req: {i} - {cep.buscar_cep()}')
     i += 1
