@@ -8,13 +8,14 @@ try:
     nro_paginas = int(input("Informe a quantidade de páginas q deseja: "))
     url = 'https://www.saocarlosagora.com.br/ultimas-noticias/p/'
 
-    start = perf_counter()
+
     nro_noticias = 0
 
     with open('noticias.txt', 'w') as file:
+        start = perf_counter()
+
         for i in tqdm(range(nro_paginas)):
             url = url[0:53] + str(i+1)
-            #print(url)
             response = requests.get(url)
             html = BeautifulSoup(response.text, 'html.parser')
 
@@ -52,12 +53,8 @@ try:
                 file.write('*' * 70)
                 file.write('\n\n')
 
-            # print(f'{i}/{nro_paginas}')
-
-            i += 1
-
         end = perf_counter()
-        msg = f'\nTotal de páginas: {i} - noticias: {nro_noticias} - duração: {(end - start):.2f} segundos'
+        msg = f'\nTotal de páginas: {i+1} - noticias: {nro_noticias} - duração: {(end - start):.2f} segundos'
         file.write(msg)
         print(msg)
 except:

@@ -2,6 +2,7 @@ from pessoa import Pessoa
 
 p1 = Pessoa('Matheus', 28)
 
+print(dir(p1))
 
 p1.falar()
 p1.falar()

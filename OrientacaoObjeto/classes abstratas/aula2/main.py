@@ -4,6 +4,7 @@ from conta_corrente import ContaCorrente
 try:
     print('Conta Poupança')
     cp = ContaPoupanca('ASX', 'SZ25', 100)
+    print(dir(cp))
     cp.depositar(10)
     cp.sacar(99)
     cp.sacar(10)
