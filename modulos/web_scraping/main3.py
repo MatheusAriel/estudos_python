@@ -7,17 +7,17 @@ import traceback
 
 try:
     nro_paginas = int(input("Informe a quantidade de páginas q deseja: "))
-    url = 'https://www.saocarlosagora.com.br/ultimas-noticias/p/{}/'
-    response = requests.get(url)
-    html = BeautifulSoup(response.text, 'html.parser')
+    url = 'https://www.saocarlosagora.com.br/ultimas-noticias/p/'
+
 
     start = perf_counter()
     nro_noticias = 0
     i = 1
-
     with open('noticias.txt', 'w') as file:
         while i <= nro_paginas:
-            url = url.format(i)
+            url = url[0:53] + str(i)
+            response = requests.get(url)
+            html = BeautifulSoup(response.text, 'html.parser')
 
             for noticia in html.select('.linkNoticia'):
                 titulo = noticia.select_one('.titulos.ultimas-noticias h3')
