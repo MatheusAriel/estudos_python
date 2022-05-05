@@ -20,3 +20,8 @@ for noticia in html.select('.linkNoticia.comImgMenor'):
     print(f'Data:\t{data.text}')
     print(f'Tema:\t{tema.text}')
     print('*' * 100, '\n\n')
+
+
+i=1
+for i in range(100):
+    print(i)

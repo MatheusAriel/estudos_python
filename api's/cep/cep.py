@@ -41,7 +41,7 @@ class Cep:
 
         return wrapper
 
-    @_calcular_tempo_request
+    #@_calcular_tempo_request
     def buscar_cep(self):
         try:
             if not isinstance(self.api, ApiCep):
