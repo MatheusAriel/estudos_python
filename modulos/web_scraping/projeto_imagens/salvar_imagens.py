@@ -10,7 +10,7 @@ try:
 
     termo_busca = input('Informe o termo a procurar: ')
     path = os.path.join("images/", termo_busca.replace(' ', '_'))
-    if os.path.exists(path):
+    if not os.path.exists(path):
         os.mkdir(path)
 
     url_base = 'https://www.zedge.net/find/{termo}'.format(termo=termo_busca.replace(' ', '%20'))
