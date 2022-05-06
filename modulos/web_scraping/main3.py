@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 termo_busca = input('Informe o termo a procurar: ')
 qtd_images = input('Informe a quantidade de imagens: ')
 
-path = os.path.join("images/", termo_busca.replace(' ', '_'))
+path = os.path.join("download/", termo_busca.replace(' ', '_'))
 if not os.path.exists(path):
     os.mkdir(path)
 
