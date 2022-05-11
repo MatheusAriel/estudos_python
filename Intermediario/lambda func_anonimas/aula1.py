@@ -12,9 +12,10 @@ print(calcular_imposto(preco, 0.3))
 
 # calcular_imposto_2 = lambda valor, percentual: valor * percentual
 # antes dos : eh parametro e depois dos : e o return
-calcular_imposto_2 = lambda x, y: x * y
+
+calcular_imposto_2 = lambda x, y=0.3: x * y
 print('Com lambda')
-print(calcular_imposto_2(preco, 0.3))
+print(calcular_imposto_2(preco, 10.0))
 
 print()
 lista_precos = [1000, 100, 500, 10, 25]
