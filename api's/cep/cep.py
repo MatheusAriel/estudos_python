@@ -89,14 +89,7 @@ class Cep:
 
 
 if __name__ == '__main__':
-    cep = Cep('13568783', ApiCep.AWESOME)
+    cep = Cep('00000000', ApiCep.AWESOME)
 
-    i = 1
-    start_time = perf_counter()
+    print(cep.buscar_cep())
 
-    while i <= 1:
-        cep.buscar_cep()
-        i += 1
-
-    end_time = perf_counter()
-    print('\t', f'Tempo total da execução: {(end_time - start_time):.2f} - {i}')

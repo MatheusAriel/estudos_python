@@ -13,17 +13,17 @@ while True:
 
 start_time = perf_counter()
 
-with open('enderecos.txt', 'w') as file:
+with open('enderecos.json', 'a+') as file:
     for i in tqdm(range(vezes)):
         endereco = Cep.gerar_endereco()
         cep = Cep(endereco['cep'], ApiCep.AWESOME)
-        cep.buscar_cep()
 
-        # mostra todos os metodos e atributos da classe cep
-        # print(dir(cep))
+        if not cep.buscar_cep() is None:
+            # mostra todos os metodos e atributos da classe cep
+            # print(dir(cep))
 
-        json.dump(endereco, file)
-        file.write('\n')
+            json.dump(endereco, file, ensure_ascii=False)
+            file.write(',\n')
 
 end_time = perf_counter()
 print(
