@@ -4,3 +4,4 @@ api's/wallpapers/download/*
 modulos/web_scraping/projeto_imagens/*
 modulos/projeto_noticias/projeto_imagens/noticias.txt
 .idea
+/Django_/projeto/settings.py
