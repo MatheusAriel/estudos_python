@@ -14,11 +14,10 @@ while True:
 start_time = perf_counter()
 
 with open('enderecos.txt', 'w') as file:
-    for i in (range(vezes)):
+    for i in tqdm(range(vezes)):
         endereco = Cep.gerar_endereco()
-        print(endereco)
-        #cep = Cep(endereco['cep'], ApiCep.AWESOME)
-        #cep.buscar_cep()
+        cep = Cep(endereco['cep'], ApiCep.AWESOME)
+        cep.buscar_cep()
 
         # mostra todos os metodos e atributos da classe cep
         # print(dir(cep))
