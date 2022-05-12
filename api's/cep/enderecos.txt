@@ -1,50 +1,15 @@
-{"cep": "29140100", "uf": "ES", "endereco": "Rua Venezuela", "bairro": "Jardim Am\u00e9rica", "cidade": "Cariacica"}
-{"cep": "67125370", "uf": "PA", "endereco": "Travessa Terceira (Lot Superlojas)", "bairro": "Icu\u00ed-Guajar\u00e1", "cidade": "Ananindeua"}
-{"cep": "56318081", "uf": "PE", "endereco": "Travessa Orlando Silva", "bairro": "Ouro Preto", "cidade": "Petrolina"}
-{"cep": "33935420", "uf": "MG", "endereco": "Rua Arax\u00e1", "bairro": "K\u00e1tia (Justin\u00f3polis)", "cidade": "Ribeir\u00e3o das Neves"}
-{"cep": "13273470", "uf": "SP", "endereco": "Rua das Hortencias", "bairro": "Parque Cecap", "cidade": "Valinhos"}
-{"cep": "86707160", "uf": "PR", "endereco": "Rua Anungua\u00e7u", "bairro": "Vila Vicentini", "cidade": "Arapongas"}
-{"cep": "13304682", "uf": "SP", "endereco": "Rua Aladino Eug\u00eanio Macella", "bairro": "Jardim Aeroporto I", "cidade": "Itu"}
-{"cep": "36016321", "uf": "MG", "endereco": "Avenida Presidente Itamar Franco - de 1601/1602 a 1999/2000", "bairro": "S\u00e3o Mateus", "cidade": "Juiz de Fora"}
-{"cep": "54355410", "uf": "PE", "endereco": "Travessa dos Guararapes", "bairro": "Muribeca", "cidade": "Jaboat\u00e3o dos Guararapes"}
-{"cep": "23063440", "uf": "RJ", "endereco": "Rua Nova Jerusal\u00e9m", "bairro": "Inhoa\u00edba", "cidade": "Rio de Janeiro"}
-{"cep": "67105064", "uf": "PA", "endereco": "Quadra Cinq\u00fcenta e Seis (Che Guevara)", "bairro": "Marituba", "cidade": "Ananindeua"}
-{"cep": "29901320", "uf": "ES", "endereco": "Avenida Alegre - de 370 a 648 - lado par", "bairro": "Aviso", "cidade": "Linhares"}
-{"cep": "13875264", "uf": "SP", "endereco": "Rua Sete", "bairro": "Jardim Nova Rep\u00fablica (2\u00aa Etapa)", "cidade": "S\u00e3o Jo\u00e3o da Boa Vista"}
-{"cep": "13574440", "uf": "SP", "endereco": "Rua dos Eletrecit\u00e1rios", "bairro": "Jardim Paulista", "cidade": "S\u00e3o Carlos"}
-{"cep": "54774460", "uf": "PE", "endereco": "Rua Manoel Queiroz Filho", "bairro": "Celeiro das Alegrias Futuras", "cidade": "Camaragibe"}
-{"cep": "23031550", "uf": "RJ", "endereco": "Rua dos Bombeiros", "bairro": "Guaratiba", "cidade": "Rio de Janeiro"}
-{"cep": "80020120", "uf": "PR", "endereco": "Travessa Nestor de Castro", "bairro": "Centro", "cidade": "Curitiba"}
-{"cep": "27213350", "uf": "RJ", "endereco": "Avenida da Integra\u00e7\u00e3o", "bairro": "Aterrado", "cidade": "Volta Redonda"}
-{"cep": "88061240", "uf": "SC", "endereco": "Servid\u00e3o da Prainha", "bairro": "Barra da Lagoa", "cidade": "Florian\u00f3polis"}
-{"cep": "72020260", "uf": "DF", "endereco": "QSD 26", "bairro": "Taguatinga Sul (Taguatinga)", "cidade": "Bras\u00edlia"}
-{"cep": "87114450", "uf": "PR", "endereco": "Rua das Estrelas", "bairro": "Jardim Universal", "cidade": "Sarandi"}
-{"cep": "17039470", "uf": "SP", "endereco": "Rua Aimor\u00e9s", "bairro": "Vila Aimor\u00e9s", "cidade": "Bauru"}
-{"cep": "21675440", "uf": "RJ", "endereco": "Rua Regin\u00f3polis", "bairro": "Guadalupe", "cidade": "Rio de Janeiro"}
-{"cep": "47810828", "uf": "BA", "endereco": "Rua Para\u00edso - at\u00e9 608/609", "bairro": "S\u00e3o Pedro", "cidade": "Barreiras"}
-{"cep": "13872311", "uf": "SP", "endereco": "Avenida Adolpho Domingues", "bairro": "N\u00facleo Durval Nicolau (Etapa 2)", "cidade": "S\u00e3o Jo\u00e3o da Boa Vista"}
-{"cep": "84043901", "uf": "PR", "endereco": "Rua Freud, s/n \r\n\r\n Conjunto Habitacional Antares", "bairro": "Col\u00f4nia Dona Lu\u00edza", "cidade": "Ponta Grossa"}
-{"cep": "86813440", "uf": "PR", "endereco": "Rua Let\u00e9rio Livoti", "bairro": "Jardim Tarob\u00e1", "cidade": "Apucarana"}
-{"cep": "54490175", "uf": "PE", "endereco": "Rua Jucupiranga", "bairro": "Barra de Jangada", "cidade": "Jaboat\u00e3o dos Guararapes"}
-{"cep": "24140320", "uf": "RJ", "endereco": "Loteamento Jardim Alvorada", "bairro": "Baldeador", "cidade": "Niter\u00f3i"}
-{"cep": "82700310", "uf": "PR", "endereco": "Rua Jo\u00e3o Scandelari", "bairro": "Barreirinha", "cidade": "Curitiba"}
-{"cep": "53620620", "uf": "PE", "endereco": "Rua Luiz Gonzaga Menezes (Vl Ebenezer Gueiros)", "bairro": "Saramandaia", "cidade": "Igarassu"}
-{"cep": "16901306", "uf": "SP", "endereco": "Rua Presidente Vargas - de 1804/1805 ao fim", "bairro": "Vila Mineira", "cidade": "Andradina"}
-{"cep": "18072036", "uf": "SP", "endereco": "Rodovia Emerenciano Prestes de Barros - at\u00e9 99998/99999", "bairro": "Parque S\u00e3o Bento", "cidade": "Sorocaba"}
-{"cep": "60190420", "uf": "CE", "endereco": "Alameda das Extremosas", "bairro": "Cidade 2000", "cidade": "Fortaleza"}
-{"cep": "65057190", "uf": "MA", "endereco": "Rua do Muro", "bairro": "Jo\u00e3o de Deus", "cidade": "S\u00e3o Lu\u00eds"}
-{"cep": "36083290", "uf": "MG", "endereco": "Rua H\u00e9lio Ribeiro de Novais", "bairro": "Milho Branco", "cidade": "Juiz de Fora"}
-{"cep": "09400610", "uf": "SP", "endereco": "Rua Joaquim Xavier de Barros", "bairro": "Pastoril", "cidade": "Ribeir\u00e3o Pires"}
-{"cep": "40313175", "uf": "BA", "endereco": "2\u00aa Travessa 2 de Fevereiro", "bairro": "Cidade Nova", "cidade": "Salvador"}
-{"cep": "14409520", "uf": "SP", "endereco": "Avenida Coelho Netto", "bairro": "City Petr\u00f3polis", "cidade": "Franca"}
-{"cep": "09606030", "uf": "SP", "endereco": "Rua Vila Queimada", "bairro": "Anchieta", "cidade": "S\u00e3o Bernardo do Campo"}
-{"cep": "09783210", "uf": "SP", "endereco": "Rua dos P\u00e1ssaros (Jd dos Qu\u00edmicos)", "bairro": "Montanh\u00e3o", "cidade": "S\u00e3o Bernardo do Campo"}
-{"cep": "91920681", "uf": "RS", "endereco": "Rua Liberal - de 1695/1696 a 3018/3019", "bairro": "Tristeza", "cidade": "Porto Alegre"}
-{"cep": "44002256", "uf": "BA", "endereco": "Rua Sales Barbosa", "bairro": "Centro", "cidade": "Feira de Santana"}
-{"cep": "94410110", "uf": "RS", "endereco": "Rua Marcelino de Figueiredo", "bairro": "Centro", "cidade": "Viam\u00e3o"}
-{"cep": "08235625", "uf": "SP", "endereco": "Pra\u00e7a Deputado Jamil Gadia", "bairro": "Parque Guarani", "cidade": "S\u00e3o Paulo"}
-{"cep": "09810560", "uf": "SP", "endereco": "Rua J\u00falia Batochio Giacomini", "bairro": "Assun\u00e7\u00e3o", "cidade": "S\u00e3o Bernardo do Campo"}
-{"cep": "68625009", "uf": "PA", "endereco": "Rua S\u00e3o Paulo", "bairro": "C\u00e9lio Miranda", "cidade": "Paragominas"}
-{"cep": "29308226", "uf": "ES", "endereco": "Rua Iva Machado Penedo", "bairro": "Aquidaban", "cidade": "Cachoeiro de Itapemirim"}
-{"cep": "88336040", "uf": "SC", "endereco": "Rua Vivalma Borges Domingos", "bairro": "Nova Esperan\u00e7a", "cidade": "Balne\u00e1rio Cambori\u00fa"}
-{"cep": "72225062", "uf": "DF", "endereco": "QNN 5 Conjunto L", "bairro": "Ceil\u00e2ndia Norte (Ceil\u00e2ndia)", "cidade": "Bras\u00edlia"}
+{"cep": "59072852", "uf": "RN", "endereco": "Rua Doutor C\u00e9sar Cabral", "bairro": "Cidade Nova", "cidade": "Natal"}
+{"cep": "89253030", "uf": "SC", "endereco": "Rua Amazonas - at\u00e9 277/278", "bairro": "Centro", "cidade": "Jaragu\u00e1 do Sul"}
+{"cep": "07091160", "uf": "SP", "endereco": "Rua Santa Terezinha", "bairro": "Jardim Bebedouro", "cidade": "Guarulhos"}
+{"cep": "94858000", "uf": "RS", "endereco": "Avenida Zero Hora", "bairro": "Jardim Algarve", "cidade": "Alvorada"}
+{"cep": "13238520", "uf": "SP", "endereco": "Rua Laranjal Paulista", "bairro": "Vila Constan\u00e7a (Botujuru)", "cidade": "Campo Limpo Paulista"}
+{"cep": "25212590", "uf": "RJ", "endereco": "Rua Benjamim Constant", "bairro": "Saracuruna", "cidade": "Duque de Caxias"}
+{"cep": "49030390", "uf": "SE", "endereco": "Pra\u00e7a Industrial Jo\u00e3o Rodrigues da Cruz", "bairro": "Farol\u00e2ndia", "cidade": "Aracaju"}
+{"cep": "25525160", "uf": "RJ", "endereco": "Rua Ab\u00edlio Machado", "bairro": "Itapu\u00e3", "cidade": "S\u00e3o Jo\u00e3o de Meriti"}
+{"cep": "07856430", "uf": "SP", "endereco": "Rua Augusta Inoc\u00eancio da Concei\u00e7\u00e3o", "bairro": "Campos de S\u00e3o Benedito", "cidade": "Franco da Rocha"}
+{"cep": "21371300", "uf": "RJ", "endereco": "Rua Tenente Jer\u00f4nimo Mesquita", "bairro": "Iraj\u00e1", "cidade": "Rio de Janeiro"}
+{"cep": "74354636", "uf": "GO", "endereco": "Rua JCA1", "bairro": "Jardim Caravelas", "cidade": "Goi\u00e2nia"}
+{"cep": "14807191", "uf": "SP", "endereco": "Avenida Aimor\u00e9s", "bairro": "Jardim Mangiacapra", "cidade": "Araraquara"}
+{"cep": "13633707", "uf": "SP", "endereco": "Estrada Levy Ramos", "bairro": "Vertentes do Mamonal", "cidade": "Pirassununga"}
+{"cep": "03625000", "uf": "SP", "endereco": "Rua Cachoeira de Santa Cruz", "bairro": "Vila Costa Melo", "cidade": "S\u00e3o Paulo"}
+{"cep": "56503450", "uf": "PE", "endereco": "Rua Tito Marques Magalh\u00e3es", "bairro": "S\u00e3o Crist\u00f3v\u00e3o", "cidade": "Arcoverde"}
