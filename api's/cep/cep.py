@@ -41,14 +41,14 @@ class Cep:
 
         return wrapper
 
-    #@_calcular_tempo_request
+    # @_calcular_tempo_request
     def buscar_cep(self):
         try:
             if not isinstance(self.api, ApiCep):
                 raise ValueError("API inválida")
 
             link = self.api.value.format(self.cep)
-            request = requests.get(link)
+            request = requests.get(link, timeout=10)
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
 
@@ -71,7 +71,7 @@ class Cep:
             link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}" '''
 
             link = "https://www.invertexto.com/ajax/gerar-cep.php"
-            request = requests.post(link)
+            request = requests.post(link, timeout=10)
 
             if request.status_code != 200:
                 raise ConnectionError(f'Erro ao gerar endereço')
@@ -92,4 +92,3 @@ if __name__ == '__main__':
     cep = Cep('00000000', ApiCep.AWESOME)
 
     print(cep.buscar_cep())
-
