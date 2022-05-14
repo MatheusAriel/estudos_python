@@ -1,5 +1,4 @@
 from cep import *
-from time import perf_counter
 from tqdm import tqdm
 import json
 

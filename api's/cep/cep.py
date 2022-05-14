@@ -1,8 +1,6 @@
 import requests
 from time import perf_counter
-from random import choice
 from enum import Enum
-import traceback
 
 
 class ApiCep(Enum):
@@ -47,20 +45,18 @@ class Cep:
             if not isinstance(self.api, ApiCep):
                 raise ValueError("API inválida")
 
-            link = self.api.value.format(self.cep)
-            request = requests.get(link, timeout=10)
-            if request.status_code != 200:
-                raise ConnectionError(f'Erro ao gerar endereço')
+            url = self.api.value.format(self.cep)
+            request = requests.get(url=url, timeout=10)
 
-            request = request.json()
-            # print(dir(request))
+            if request.status_code != 200:
+                raise ConnectionError(f'Erro ao gerar endereço - CODE {request.status_code} | MSG {request.json()}')
+
+            return request.json()
 
         except (ConnectionError, requests.exceptions.ConnectionError) as erro:
             print(f'Erro na conexão - {erro}')
         except (ValueError, TypeError, Exception) as erro:
             print(f'Erro: {erro}')
-        else:
-            return request
 
     @staticmethod
     # @_calcular_tempo_request
@@ -70,20 +66,17 @@ class Cep:
                              'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF']
             link = f"https://geradornv.com.br/wp-json/api/cep/random-by-states?state={choice(lista_estados)}" '''
 
-            link = "https://www.invertexto.com/ajax/gerar-cep.php"
-            request = requests.post(link, timeout=10)
+            url = "https://www.invertexto.com/ajax/gerar-cep.php"
+            request = requests.post(url=url, timeout=10)
 
             if request.status_code != 200:
-                raise ConnectionError(f'Erro ao gerar endereço')
+                raise ConnectionError(f'Erro ao gerar endereço CODE {request.status_code} | MSG {request.json()}')
 
             if 'message' in request and request['message'] == 'error':
                 raise ConnectionError(f'Erro ao gerar endereço')
 
-        except (ConnectionError, requests.exceptions.ConnectionError) as erro:
-            print(f'Erro ao gerar ENDEREÇO - {erro}')
-        except Exception as erro:
-            print(f'Erro ao gerar ENDEREÇO - {erro}')
-            traceback.print_exc()
+        except (ConnectionError, requests.exceptions.ConnectionError, Exception) as erro:
+            print(f'Erro ao gerar endereço - {erro}')
         else:
             return request.json()
 
