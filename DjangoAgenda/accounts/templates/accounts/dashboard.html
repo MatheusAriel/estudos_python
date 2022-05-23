@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{%block titulo%}{{titulo}}{%endblock%}
+
+{%block conteudo%}
+<h1 class="mb-3 mt-3">Olá, {{user.first_name }} {{user.last_name }}</h1>
+<p>Usuário: {{user}}</p>
+
+
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Logout</button>
+</form>
+<br>
+
+<div class="container">
+    <form method="POST" action="{% url 'dashboard' %}" enctype="multipart/form-data">
+        <table class="table">
+            {% csrf_token %}
+            {{ form }}
+
+            <tr>
+                <td colspan="2">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+{%endblock%}
