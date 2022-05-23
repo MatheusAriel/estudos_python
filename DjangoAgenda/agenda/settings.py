@@ -51,6 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'agenda.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
