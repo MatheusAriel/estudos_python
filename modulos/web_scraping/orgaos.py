@@ -30,6 +30,8 @@ with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
                     link_completo_municipio = ('https://cnes2.datasus.gov.br/' + links2['href']).replace(' ', '')
 
                 if 'PREFEITURAMUNICIPAL' in link_completo_municipio or 'PREF MUN' in link_completo_municipio:
+                    sleep(2)
+
                     try:
                         print(link_completo_municipio, z)
                         z += 1
@@ -51,7 +53,6 @@ with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
                             if i == 1:
                                 nome = row.findAll('td')[0].text.strip('\n').strip('\t')
                                 cnpj = row.findAll('td')[1].text.strip('\n').strip('\t')
-
                                 file.write(f"{nome};{nome};{cnpj};")
 
                             if i == 3:
@@ -59,14 +60,12 @@ with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
                                 numero = row.findAll('td')[1].text.strip('\n').strip('\t')
                                 complemento = row.findAll('td')[2].text.strip('\n').strip('\t')
                                 bairro = row.findAll('td')[3].text.strip('\n').strip('\t')
-
                                 file.write(f"{endereco};{numero};{complemento};{bairro};")
 
                             if i == 5:
                                 cidade = row.findAll('td')[0].text.strip('\n').strip('\t')
                                 cep = row.findAll('td')[1].text.strip('\n').strip('\t')
                                 uf = row.findAll('td')[2].text.strip('\n').strip('\t')
-
                                 file.write(f"{cidade};{cep};{uf}\n")
 
                             # print(f"{nome};{cnpj};{endereco};{numero};{complemento};{cidade};{cep}")
@@ -77,7 +76,6 @@ with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
                             # writer.writerows([nome, cnpj, endereco, numero, complemento, cidade, cep, uf])
 
                             i += 1
-                            sleep(1.5)
 
                     except:
                         pass
