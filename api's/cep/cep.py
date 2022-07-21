@@ -82,6 +82,6 @@ class Cep:
 
 
 if __name__ == '__main__':
-    cep = Cep('00000000', ApiCep.AWESOME)
+    cep = Cep('14815100', ApiCep.AWESOME)
 
     print(cep.buscar_cep())
