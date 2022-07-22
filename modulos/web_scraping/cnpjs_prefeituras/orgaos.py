@@ -8,7 +8,7 @@ import traceback
 from time import sleep
 
 z = 1
-with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
+with open('../222.csv', 'w+', encoding='UTF8', newline='') as file:
     url0 = 'https://cnes2.datasus.gov.br/Lista_Tot_Es_Estado_Mantenedora.asp'
     response0 = requests.get(url0)
     html0 = BeautifulSoup(response0.text, 'html.parser')
@@ -33,7 +33,7 @@ with open('orgaos.csv', 'w+', encoding='UTF8', newline='') as file:
                     link_completo_municipio = ('https://cnes2.datasus.gov.br/' + links2['href']).replace(' ', '')
 
                 if 'PREFEITURAMUNICIPAL' in link_completo_municipio or 'PREF MUN' in link_completo_municipio:
-                    sleep(2)
+                    #sleep(2)
 
                     try:
                         print(link_completo_municipio, z)
