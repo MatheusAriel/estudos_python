@@ -1,3 +1,6 @@
+"""
+Script feito para pegar todos os cnpjs de prefeituras cdastradas no cnes2
+"""
 import requests
 from bs4 import BeautifulSoup
 from time import perf_counter
