@@ -88,8 +88,8 @@ class ChromeAuto:
 
 
 if __name__ == '__main__':
-    # chrome = ChromeAuto()
-    # chrome.acessa('https://github.com/')
+    chrome = ChromeAuto()
+    chrome.acessa('https://github.com/')
     # sleep(1)
     # chrome.clica_login()
     # sleep(2)
@@ -97,11 +97,11 @@ if __name__ == '__main__':
     # chrome.clicar_perfil()
     # sleep(1)
     # chrome.verificar_usuario('MatheusAriel')
-    #
-    # sleep(1)
-    # chrome.sair()
-    while True:
-        chrome = ChromeAuto()
-        chrome.acessa('https://google.com.br')
-        sleep(60)
-        chrome.sair()
+
+    sleep(1)
+    #chrome.sair()
+    # while True:
+    #     chrome = ChromeAuto()
+    #     chrome.acessa('https://google.com.br')
+    #     sleep(60)
+    #     chrome.sair()
