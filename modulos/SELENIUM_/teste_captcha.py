@@ -59,6 +59,6 @@ if __name__ == '__main__':
         print('Carregou noticia')
 
     except TimeoutException:
-        print("Time out n achou www apos 3 segundos na pagina")
+        print("Time out n achou glb-topo || feed-media-wrapper apos 3 segundos na pagina")
     except:
         print(traceback.print_exc())
