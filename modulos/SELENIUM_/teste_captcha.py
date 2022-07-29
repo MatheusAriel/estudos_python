@@ -47,7 +47,7 @@ if __name__ == '__main__':
         #                                  '[aria-label="Será necessário digitar o código da imagem, há um link abaixo para ouvi-lo"]')
         # captch_img.screenshot('capctha.png')
 
-        # api_key = os.getenv('APIKEY_2CAPTCHA', '246fa67628d09580ac9395c6e0db9a94')
+        # api_key = os.getenv('APIKEY_2CAPTCHA', '')
         # solver = twocaptcha.TwoCaptcha(api_key)
         # result = solver.normal('captcha.png')
 
