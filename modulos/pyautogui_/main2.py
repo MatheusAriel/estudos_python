@@ -11,3 +11,5 @@ while True:
     pyautogui.moveTo(x=850, y=350)
     sleep(3)
     pyautogui.press('win')
+
+
