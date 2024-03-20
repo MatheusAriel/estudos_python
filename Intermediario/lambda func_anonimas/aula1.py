@@ -24,3 +24,7 @@ print(impostos)
 
 impostos2 = list(map(calcular_imposto, lista_precos))
 print(impostos2)
+
+print()
+result = lambda p1, p2: p1 + p2
+print(result(10, 5))

@@ -34,4 +34,9 @@ random.shuffle(lista_nomes)
 print(lista_nomes, '\n')
 
 
+print('##################')
+
+lista_numeros = range(25)
+print(lista_numeros)
+print(random.sample(lista_numeros,15))
 
